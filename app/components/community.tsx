@@ -2,6 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ArrowRight, Shield, Zap, Home, Building } from "lucide-react";
+import ContactForm from "./contact-form";
 
 const values = [
 	{
@@ -99,60 +100,7 @@ export default function JoinCommunity() {
 					transition={{ duration: 0.6, delay: 0.6 }}
 					className="relative max-w-4xl mx-auto"
 				>
-					<div className="absolute inset-0 bg-linear-to-r from-primary/20 via-accent/10 to-primary/20 rounded-3xl blur-xl" />
-					<div className="relative glass-card rounded-3xl p-8 md:p-12 border border-primary/20">
-						<div className="grid md:grid-cols-2 gap-8 items-center">
-							<div>
-								<h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-									Be <span className="text-gradient">Prepared</span>
-								</h3>
-								<p className="text-muted-foreground mb-6">
-									Join the waitlist for early access to SeismoGuard. Be among
-									the first to protect your home, school, or workplace with our
-									advanced seismic detection system.
-								</p>
-								<div className="flex items-center gap-6 text-sm text-muted-foreground">
-									<div className="flex items-center gap-2">
-										<div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-										Limited Units
-									</div>
-									<div className="flex items-center gap-2">
-										<div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-										Coming 2025
-									</div>
-								</div>
-							</div>
-
-							<form className="space-y-4">
-								<div className="relative">
-									<input
-										type="email"
-										value={email}
-										onChange={(e) => setEmail(e.target.value)}
-										placeholder="Enter your email"
-										className="w-full px-6 py-4 rounded-xl bg-background/50 border border-primary/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
-										required
-									/>
-								</div>
-								<motion.button
-									type="submit"
-									disabled={isSubmitting}
-									whileHover={{ scale: 1.02 }}
-									whileTap={{ scale: 0.98 }}
-									className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-primary text-primary-foreground font-semibold hover:shadow-[0_0_30px_hsl(35_100%_50%/0.4)] transition-all duration-300 disabled:opacity-50"
-								>
-									{isSubmitting ? (
-										<div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
-									) : (
-										<>
-											Join Waitlist
-											<ArrowRight className="w-5 h-5" />
-										</>
-									)}
-								</motion.button>
-							</form>
-						</div>
-					</div>
+					<ContactForm />
 				</motion.div>
 			</div>
 		</section>

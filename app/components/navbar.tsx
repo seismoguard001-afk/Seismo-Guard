@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
 	{ name: "Home", href: "#home" },
@@ -41,9 +42,13 @@ export default function Navbar() {
 					whileHover={{ scale: 1.02 }}
 				>
 					<div className="relative w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center overflow-hidden group-hover:border-primary/60 transition-colors duration-300">
-						<span className="font-display font-bold text-primary text-lg">
-							S
-						</span>
+						<Image
+							src="/favicon.ico"
+							alt="Logo"
+							width={50}
+							height={50}
+							className="rounded-lg"
+						/>
 						<div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 					</div>
 					<span className="font-display font-bold text-xl tracking-wider text-foreground">
