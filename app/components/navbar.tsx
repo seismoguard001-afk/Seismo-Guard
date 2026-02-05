@@ -75,7 +75,7 @@ export default function Navbar() {
 
 				{/* CTA Button */}
 				<motion.a
-					href="#community"
+					href="#contact"
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.6 }}

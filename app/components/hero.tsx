@@ -59,7 +59,7 @@ export default function Hero() {
 						{/* CTA Buttons */}
 						<div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
 							<motion.a
-								href="#community"
+								href="#contact"
 								whileHover={{ scale: 1.02 }}
 								whileTap={{ scale: 0.98 }}
 								className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-lg animate-glow-pulse hover:shadow-[0_0_40px_hsl(35_100%_50%/0.5)] transition-all duration-300"

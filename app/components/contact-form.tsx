@@ -50,9 +50,9 @@ const ContactForm = () => {
 	};
 
 	return (
-		<section className="relative py-20 px-4 overflow-hidden">
+		<section id="contact" className="relative py-20 px-4 overflow-hidden">
 			{/* Background Effects */}
-			<div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+			<div className="absolute inset-0 bg-linear-to-b from-background via-background/95 to-background" />
 			<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(35_100%_50%/0.1),transparent_50%)]" />
 
 			<div className="relative max-w-6xl mx-auto">

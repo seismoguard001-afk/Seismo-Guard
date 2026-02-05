@@ -108,7 +108,7 @@ export default function Footer() {
 									href="mailto:hello@seismoguard.pk"
 									className="text-muted-foreground text-sm hover:text-primary transition-colors"
 								>
-									hello@seismoguard.pk
+									seismoguard001@gmail.com
 								</a>
 							</li>
 							<li className="flex items-center gap-3">
@@ -117,7 +117,7 @@ export default function Footer() {
 									href="tel:+923001001801"
 									className="text-muted-foreground text-sm hover:text-primary transition-colors"
 								>
-									+92 300 1001801
+									+92 315 3854898
 								</a>
 							</li>
 						</ul>
