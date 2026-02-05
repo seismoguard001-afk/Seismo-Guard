@@ -11,10 +11,11 @@ import {
 } from "lucide-react";
 
 const socialLinks = [
-	{ icon: Facebook, href: "#", label: "Facebook" },
-	{ icon: Twitter, href: "#", label: "Twitter" },
-	{ icon: Instagram, href: "#", label: "Instagram" },
-	{ icon: Linkedin, href: "#", label: "LinkedIn" },
+	{
+		icon: Instagram,
+		href: "https://www.instagram.com/seismo_guard?igsh=MTVnZ3NrODdrMTc4OA==",
+		label: "Instagram",
+	},
 ];
 
 const quickLinks = [
