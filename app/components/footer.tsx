@@ -9,6 +9,7 @@ import {
 	Instagram,
 	Linkedin,
 } from "lucide-react";
+import Image from "next/image";
 
 const socialLinks = [
 	{
@@ -38,9 +39,13 @@ export default function Footer() {
 					<div className="lg:col-span-2">
 						<div className="flex items-center gap-3 mb-6">
 							<div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
-								<span className="font-display font-bold text-primary text-lg">
-									S
-								</span>
+								<Image
+									src="/favicon.ico"
+									alt="Logo"
+									width={50}
+									height={50}
+									className="rounded-lg"
+								/>
 							</div>
 							<span className="font-display font-bold text-xl tracking-wider text-foreground">
 								SEISMOGUARD
