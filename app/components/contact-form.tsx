@@ -14,6 +14,7 @@ interface IFormData {
 
 const ContactForm = () => {
 	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [isSubmitted, setIsSubmitted] = useState(false);
 	const {
 		register,
 		handleSubmit,
@@ -26,6 +27,7 @@ const ContactForm = () => {
 		console.log(data);
 		try {
 			if (formRef.current) {
+				setIsSubmitted(false);
 				setIsSubmitting(true);
 				const response = await emailjs.sendForm(
 					"service_s7s3d6o", // Your Service ID
@@ -39,12 +41,14 @@ const ContactForm = () => {
 						"Thank you for contacting us! We'll get back to you soon.",
 					);
 					reset(); // Clear form immediately
+					setIsSubmitted(true);
 					setIsSubmitting(false);
 				}
 			}
 		} catch (error) {
 			console.error("Error sending email:", error);
 			toast.error("Failed to send message. Please try again.");
+			setIsSubmitted(false);
 			setIsSubmitting(false);
 		}
 	};
@@ -207,6 +211,11 @@ const ContactForm = () => {
 									</>
 								)}
 							</motion.button>
+							{isSubmitted && (
+								<div className="text-center text-sm text-emerald-500">
+									Form submitted successfully.
+								</div>
+							)}
 						</form>
 
 						{/* Additional Info */}
