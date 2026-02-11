@@ -124,20 +124,26 @@ const ContactForm = () => {
 										htmlFor="from_email"
 										className="block text-sm font-medium text-foreground mb-2"
 									>
-										Your Email <span className="text-primary">*</span>
+										Email or Phone <span className="text-primary">*</span>
 									</label>
 									<input
 										{...register("from_email", {
-											required: "Please enter your email",
-											pattern: {
-												value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-												message: "Invalid email address",
+											required: "Please enter your email or phone number",
+											validate: (value) => {
+												const emailRegex =
+													/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+												const phoneRegex = /^\+?[0-9\s().-]{7,}$/;
+												return (
+													emailRegex.test(value) ||
+													phoneRegex.test(value) ||
+													"Enter a valid email or phone number"
+												);
 											},
 										})}
-										type="email"
+										type="text"
 										id="from_email"
 										className="w-full px-6 py-4 rounded-xl bg-background/50 border border-primary/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
-										placeholder="john@example.com"
+										placeholder="john@example.com or (555) 555-5555"
 									/>
 									{errors.from_email && (
 										<span className="text-red-500 text-sm mt-1 block">
